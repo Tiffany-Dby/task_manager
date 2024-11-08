@@ -14,6 +14,7 @@
     <?php require_once __DIR__ . "/tmHeader.php" ?>
 
     <main>
+            <?php require_once __DIR__ . "/tmAddTask.php" ?>
             <?php require_once __DIR__ . '/tmViewTasksList.php' ?>
     </main>
 
