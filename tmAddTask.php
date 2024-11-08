@@ -18,7 +18,7 @@
         $tmTitle = $_POST['tmTitle'];
         $tmDescription = $_POST['tmDescription'];
         $user_id = 1;
-        $sql = "INSERT INTO tasks (title, description, user_id) VALUES ('$tmTitle', '$tmDescription', $user_id)";
+        $tmSql = "INSERT INTO tasks (title, description, user_id) VALUES ('$tmTitle', '$tmDescription', $user_id)";
         $base->exec($sql);
         
     }
