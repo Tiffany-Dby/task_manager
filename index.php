@@ -13,7 +13,7 @@
 <body>
     <?php require_once __DIR__ . "/tmHeader.php" ?>
     <main>
-
+        <?php include ("tmAddTask.php") ?>
     </main>
     <?php require_once __DIR__ . "/tmFooter.php" ?>
 </body>

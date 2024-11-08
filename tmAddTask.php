@@ -17,8 +17,12 @@
     if (isset($_POST['tmTitle']) && isset($_POST['tmDescription'])) {
         $tmTitle = $_POST['tmTitle'];
         $tmDescription = $_POST['tmDescription'];
-        $user_id = 1;
-        $tmSql = "INSERT INTO tasks (title, description, user_id) VALUES ('$tmTitle', '$tmDescription', $user_id)";
-        $base->exec($tmSql);
+        $tmUser_id = 1;
+        $tmSql = "INSERT INTO tasks (title, description, user_id) VALUES ('$tmTitle', '$tmDescription', $tmUser_id)";
+        $tmBase->exec($tmSql);
         
     }
+    foreach ($tmBase->query('SELECT * FROM tasks') as $tmRow) {
+        echo "<p>Titre : $tmRow[title]";
+        echo "<br>Description : $tmRow[description]";
+        echo "<br>Date de création : $tmRow[created_at]";}
