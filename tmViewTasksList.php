@@ -6,7 +6,8 @@ require_once ('tmHeader.php');
 try {
 
     // Récupérer l'ID de l'utilisateur depuis l'URL
-    $tmUserId = isset($_GET['user_id']) ? (int) $_GET['user_id'] : null;
+    //$tmUserId = isset($_GET['user_id']) ? (int) $_GET['user_id'] : null;
+    $tmUserId = 1;
 
     // Si un user_id est spécifié, on filtre les tâches par cet ID, sinon on affiche toutes les tâches
     if ($tmUserId) {
@@ -24,7 +25,7 @@ try {
 
     if ($tmUsers) {
         echo "<h2>Task list</h2>";
-        echo "<table>
+        echo "<table border='1'>
             <tr>
                 <th>Task ID</th>
                 <th>User ID</th>
@@ -43,7 +44,7 @@ try {
                 <td>" . htmlspecialchars($tmUser['description']) . "</td>
                 <td>" . htmlspecialchars($tmUser['status']) . "</td>         
                 <td>" . htmlspecialchars($tmUser['created_at']) . "</td>
-                <td>" . htmlspecialchars($tmUser['completed_at']) . "</td>     
+                <td>" . $tmUser['completed_at'] . "</td>     
             </tr>";
         }
 
