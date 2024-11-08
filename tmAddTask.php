@@ -22,7 +22,7 @@
         $tmBase->exec($tmSql);
         
     }
-    foreach ($tmBase->query('SELECT * FROM tasks') as $tmRow) {
-        echo "<p>Titre : $tmRow[title]";
-        echo "<br>Description : $tmRow[description]";
-        echo "<br>Date de création : $tmRow[created_at]";}
+    //foreach ($tmBase->query('SELECT * FROM tasks') as $tmRow) {
+    //    echo "<p>Titre : $tmRow[title]";
+    //    echo "<br>Description : $tmRow[description]";
+    //    echo "<br>Date de création : $tmRow[created_at]";}
