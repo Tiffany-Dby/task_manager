@@ -1,12 +1,16 @@
 <?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = '';
-$db_name = 'task_manager';
+$tm_db_host = 'localhost';
+$tm_db_user = 'root';
+$tm_db_password = '';
+$tm_db_name = 'task_manager';
 
 try {
-    $base = new PDO("mysql:host=$db_host;dbname=$db_name", "$db_user", "$db_password");
-    $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
+
+    $tmBase = new PDO("mysql:host=$tm_db_host;dbname=$tm_db_name", "$tm_db_user", "$tm_db_password");
+    $tmBase->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    } catch (PDOException $e) {
+
     die('Connection failed: ' . $e->getMessage());
 }
+?>

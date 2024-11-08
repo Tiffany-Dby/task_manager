@@ -12,9 +12,11 @@
 </head>
 <body>
     <?php require_once __DIR__ . "/tmHeader.php" ?>
-    <main>
 
+    <main>
+            <?php require_once __DIR__ . '/tmViewTasksList.php' ?>
     </main>
+
     <?php require_once __DIR__ . "/tmFooter.php" ?>
 </body>
 </html>
