@@ -17,8 +17,8 @@
     if (isset($_POST['tmTitle']) && isset($_POST['tmDescription'])) {
         $tmTitle = $_POST['tmTitle'];
         $tmDescription = $_POST['tmDescription'];
-        $tmUser_id = 1;
-        $tmSql = "INSERT INTO tasks (title, description, user_id) VALUES ('$tmTitle', '$tmDescription', $tmUser_id)";
+        $tmUserId = 1;
+        $tmSql = "INSERT INTO tasks (title, description, user_id) VALUES ('$tmTitle', '$tmDescription', $tmUserId)";
         $tmBase->exec($tmSql);
         
     }
@@ -26,3 +26,7 @@
     //    echo "<p>Titre : $tmRow[title]";
     //    echo "<br>Description : $tmRow[description]";
     //    echo "<br>Date de création : $tmRow[created_at]";}
+    //$tmSql = "SELECT completed_at FROM tasks WHERE task_id = $task_id";
+    //$tmResult = $tmBase->query($tmSql);
+    //$iscomplete = $tmResult->fetchColumn();
+    
