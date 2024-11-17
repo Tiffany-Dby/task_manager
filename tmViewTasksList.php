@@ -1,10 +1,9 @@
 <?php
-
-require_once ('tmDatabase.php');
+require_once __DIR__ . '/tmFunctions/tmDatabase.php';
 require_once ('tmHeader.php');
 
 try {
-
+    $tmBase = tmConnectDb();
     // Récupérer l'ID de l'utilisateur depuis l'URL
     //$tmUserId = isset($_GET['user_id']) ? (int) $_GET['user_id'] : null;
     $tmUserId = 1;
@@ -62,7 +61,3 @@ try {
 } catch (Exception $e) {
     die('Connection failed: ' . $e->getMessage());
 }
-
-require_once ('tmFooter.php');
-
-?>

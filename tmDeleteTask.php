@@ -1,10 +1,10 @@
 <?php
 
-require_once ('tmDatabase.php');
+require_once __DIR__ . '/tmFunctions/tmDatabase.php';
 require_once ('tmHeader.php');
 
 try {
-
+        $tmBase = tmConnectDb();
         $tmUserId = 3;
 
         if (isset($_POST['delete']) && $_POST['delete'] == 'yes'    ) {

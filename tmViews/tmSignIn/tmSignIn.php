@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../tmStyles/gardevoir.css">
     <link rel="stylesheet" href="../../tmStyles/index.css">
     <title>Task Manager - Se connecter</title>
@@ -15,26 +16,28 @@
     <?php require_once __DIR__ . "/../../tmHeader.php" ?>
     <main>
         <section>
-            <div class="tmContainer">
-                <h1>Se connecter</h1>
+            <div class="container">
+                <div class="form__container">
+                    <h1>Se connecter</h1>
 
-                <?php if(isset($_SESSION["signInError"])): ?>
-                    <p class="tmError"> <?php echo $_SESSION["signInError"] ?></p>
-                <?php endif; ?>
+                    <?php if(isset($_SESSION["signInError"])): ?>
+                        <p class="error"> <?php echo $_SESSION["signInError"] ?></p>
+                    <?php endif; ?>
 
-                <form action="tmProcessSignIn.php" method="POST">
-                    <div class="tmInputWrapper">
-                        <label class="tmInputLabel"  for="email">Email</label>
-                        <input class="tmInput" type="email" id="email" name="email">
-                    </div>
-                    <div class="tmInputWrapper">
-                        <label class="tmInputLabel" for="password">Mot de passe</label>
-                        <input class="tmInput" type="password" id="password" name="password">
-                    </div>
-                    <div class="tmBtnWrapper">
-                        <input class="tmBtn" type="submit" name="signIn" value="Connexion">
-                    </div>
-                </form>
+                    <form class="form" action="tmProcessSignIn.php" method="POST">
+                        <div class="input__wrapper">
+                            <label class="input__label"  for="email">Email</label>
+                            <input class="input" type="email" id="email" name="email">
+                        </div>
+                        <div class="input__wrapper">
+                            <label class="input__label" for="password">Mot de passe</label>
+                            <input class="input" type="password" id="password" name="password">
+                        </div>
+                        <div class="form__btn">
+                            <input class="btn btn--primary" type="submit" name="signIn" value="Connexion">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

@@ -1,4 +1,5 @@
-<?php require_once('tmDatabase.php');
+<?php
+require_once __DIR__ . '/tmFunctions/tmDatabase.php';
 
 $tmTitle = "";
 $tmDescription = "";
@@ -14,6 +15,7 @@ $tmDescription = "";
     </form>
 <?php
 if (isset($_POST['tmTitle']) && isset($_POST['tmDescription'])) {
+    $tmBase = tmConnectDb();
     $tmTitle = $_POST['tmTitle'];
     $tmDescription = $_POST['tmDescription'];
     $tmUser_id = 1;

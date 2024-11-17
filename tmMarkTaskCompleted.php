@@ -1,8 +1,8 @@
 <?php
-
-require_once('tmDatabase.php');
+require_once __DIR__ . '/tmFunctions/tmDatabase.php';
 
 try {
+    $tmBase = tmConnectDb();
     // Récupérer l'ID de la tâche depuis l'URL
     $taskId = 5;
 
