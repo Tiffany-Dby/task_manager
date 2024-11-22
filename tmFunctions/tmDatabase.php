@@ -2,7 +2,7 @@
 function tmConnectDb() {
 $tm_db_host = 'localhost';
 $tm_db_user = 'root';
-$tm_db_password = '';
+$tm_db_password = 'root';
 $tm_db_name = 'task_manager';
 
     try {

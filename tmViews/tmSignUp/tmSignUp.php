@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../tmStyles/gardevoir.css">
-    <link rel="stylesheet" href="../../tmStyles/index.css">
+    <link rel="stylesheet" href="../../tmAssets/tmStyles/gardevoir.css">
+    <link rel="stylesheet" href="../../tmAssets/tmStyles/index.css">
     <title>Task Manager - S'inscrire</title>
 </head>
 <body>
@@ -41,6 +41,8 @@
                             <input class="btn btn--primary" type="submit" name="signUp" value="Créer">
                         </div>
                     </form>
+                    <p>Déjà inscrit? <a href="/task_manager/tmViews/tmSignIn/tmSignIn.php">Connexion</a></p>
+                </div>
             </div>
         </section>
     </main>

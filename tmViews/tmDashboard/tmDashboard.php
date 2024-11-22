@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../tmStyles/gardevoir.css">
-    <link rel="stylesheet" href="../../tmStyles/index.css">
+    <link rel="stylesheet" href="../../tmAssets/tmStyles/gardevoir.css">
+    <link rel="stylesheet" href="../../tmAssets/tmStyles/index.css">
     <title>Task Manager - Mon compte</title>
 </head>
 <body>

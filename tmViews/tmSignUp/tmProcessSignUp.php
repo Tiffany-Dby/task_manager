@@ -20,6 +20,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["signUp"])){
     $tmEmail = htmlspecialchars($_POST["email"]);
     $tmPassword = htmlspecialchars($_POST["password"]);
 
+    if(!filter_var($tmEmail, FILTER_VALIDATE_EMAIL)){
+        $_SESSION["signUpError"] = "Veuillez entrer une adresse email valide";
+
+        header("Location: tmSignUp.php");
+        exit();
+    }
+
     $tmPasswordHash = password_hash($tmPassword, PASSWORD_BCRYPT);
 
     $tmNewUserId = tmCreateUser($tmUsername, $tmEmail, $tmPasswordHash);

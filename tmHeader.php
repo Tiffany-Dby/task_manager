@@ -10,12 +10,12 @@
                 </li>
                 <?php if(!isset($_SESSION["email"])): ?>
                 <li>
-                    <a href="/task_manager/tmViews/tmSignIn/tmSignIn.php">Se connecter</a>
-                </li>
-                <li>
-                    <a href="/task_manager/tmViews/tmSignUp/tmSignUp.php">S'inscrire</a>
+                    <a href="/task_manager/tmViews/tmSignIn/tmSignIn.php"><i class="fa-solid fa-plug"></i> Se connecter</a>
                 </li>
                 <?php else: ?>
+                    <li>
+                        <a href="/task_manager/tmViews/tmTasks/tmTasks.php"><i class="fas fa-tasks"></i> Mes tâches</a>
+                    </li>
                     <li>
                         <a href="/task_manager/tmViews/tmDashboard/tmDashboard.php"><i class="fas fa-user"></i> Mon compte</a>
                     </li>

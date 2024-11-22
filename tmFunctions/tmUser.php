@@ -31,6 +31,7 @@ function tmSignIn($email, $password): bool
 
     $_SESSION["username"] = $tmUser["username"];
     $_SESSION["email"] = $tmUser["email"];
+    $_SESSION["userId"] = $tmUser["user_id"];
 
     return true;
 }
