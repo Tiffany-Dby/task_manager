@@ -1,10 +1,11 @@
 <?php
 require_once __DIR__ . '/tmDatabase.php';
 
-function tmGetUserByMail($email){
-    $tmBase = tmConnectDb();
-
+function tmGetUserByMail($email)
+{
     try {
+        $tmBase = tmConnectDb();
+
         $tmResult = $tmBase->prepare("SELECT user_id, username, email, password FROM users WHERE email = :email");
         $tmResult->bindParam(":email", $email);
         $tmResult->execute();
@@ -46,9 +47,9 @@ function tmSignOut(): void
 
 function tmCreateUser($username, $email, $password): false|string
 {
-    $tmBase = tmConnectDb();
-
     try {
+        $tmBase = tmConnectDb();
+
         $tmResult = $tmBase->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
         $tmResult->bindParam(":username", $username);
         $tmResult->bindParam(":email", $email);
